@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SinhVien;
+use App\Models\HopDong;
 use Illuminate\Http\Request;
 
-class SinhVienController extends Controller
+class HopDongController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class SinhVienController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SinhVien $sinhVien)
+    public function show(HopDong $hopDong)
     {
         //
     }
@@ -42,7 +42,7 @@ class SinhVienController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SinhVien $sinhVien)
+    public function edit(HopDong $hopDong)
     {
         //
     }
@@ -50,7 +50,7 @@ class SinhVienController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SinhVien $sinhVien)
+    public function update(Request $request, HopDong $hopDong)
     {
         //
     }
@@ -58,7 +58,7 @@ class SinhVienController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SinhVien $sinhVien)
+    public function destroy(HopDong $hopDong)
     {
         //
     }

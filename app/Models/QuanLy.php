@@ -9,4 +9,5 @@ class QuanLy extends Model
 {
     /** @use HasFactory<\Database\Factories\QuanLyFactory> */
     use HasFactory;
+    protected $table = 'quan_ly'; // Tên bảng trong cơ sở dữ liệu
 }
