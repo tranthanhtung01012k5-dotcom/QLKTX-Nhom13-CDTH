@@ -42,6 +42,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'tai_khoan' => [
+            'driver' => 'session',
+            'provider' => 'tai_khoan',
+        ],
     ],
 
     /*
@@ -64,15 +69,14 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', User::class),
+            'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'tai_khoan' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\TaiKhoan::class,
+        ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords

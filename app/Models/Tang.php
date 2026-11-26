@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Tang extends Model
 {
-    /** @use HasFactory<\Database\Factories\TangFactory> */
-    use HasFactory;
+    protected $table = 'tang';
+
+    public function toaNha(): BelongsTo
+    {
+        return $this->belongsTo(ToaNha::class, 'toa_nha_id', 'id');
+    }
 }

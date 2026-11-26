@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Phong extends Model
 {
-    /** @use HasFactory<\Database\Factories\PhongFactory> */
-    use HasFactory;
+    protected $table = 'phong';
+
+    public function tang(): BelongsTo
+    {
+        return $this->belongsTo(Tang::class, 'tang_id', 'id');
+    }
 }
